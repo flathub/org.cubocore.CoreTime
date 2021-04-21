@@ -60,6 +60,18 @@
     </screenshots>
 
     <suggests>
+        <id>org.cubocore.CoreAction</id>
+        <id>org.cubocore.CoreArchiver</id>
+        <id>org.cubocore.CoreFM</id>
+        <id>org.cubocore.CoreHunt</id>
         <id>org.cubocore.CoreImage</id>
+        <id>org.cubocore.CoreInfo</id>
+        <id>org.cubocore.CoreKeyboard</id>
+        <id>org.cubocore.CorePad</id>
+        <id>org.cubocore.CorePaint</id>
+        <id>org.cubocore.CorePDF</id>
+        <id>org.cubocore.CoreRenamer</id>
+        <id>org.cubocore.CoreShot</id>
+        <id>org.cubocore.CoreStats</id>
     </suggests>
 </component>
