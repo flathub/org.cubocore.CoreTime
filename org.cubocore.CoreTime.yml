@@ -30,7 +30,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
-        tag: v4.2.0
+        tag: v4.3.0
   - name: coretime
     post-install:
       - install -Dp -m 644 org.cubocore.CoreTime.appdata.xml /app/share/appdata/org.cubocore.CoreTime.appdata.xml
@@ -44,5 +44,5 @@ modules:
         path: org.cubocore.CoreTime.appdata.xml
       - type: git
         url: https://gitlab.com/cubocore/coreapps/coretime.git
-        tag: v4.2.0
+        tag: v4.3.0
 
