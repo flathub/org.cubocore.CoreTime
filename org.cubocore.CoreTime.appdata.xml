@@ -39,7 +39,7 @@
     </categories>
 
     <content_rating type="oars-1.1" />
-    <url type="homepage">https://cubocore.org</url>
+    <url type="homepage">https://cubocore.gitlab.io/</url>
     <url type="help">https://gitlab.com/cubocore/coreapps/coretime/-/blob/master/README.md</url>
     <url type="bugtracker">https://gitlab.com/cubocore/coreapps/coretime/-/issues</url>
     <url type="contact">https://app.element.io/#/room/#cubocore:matrix.org</url>
