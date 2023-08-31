@@ -10,6 +10,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio # Required for ringing alarm
   - --device=dri
+  - --filesystem=xdg-config
   - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=org.freedesktop.Notifications
   - --own-name=org.kde.* # For showing in the system tray
@@ -31,7 +32,7 @@ modules:
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
-        tag: v4.4.1
+        tag: v4.5.0
   - name: coretime
     post-install:
       - install -Dp -m 644 org.cubocore.CoreTime.appdata.xml /app/share/appdata/org.cubocore.CoreTime.appdata.xml
@@ -45,5 +46,5 @@ modules:
         path: org.cubocore.CoreTime.appdata.xml
       - type: git
         url: https://gitlab.com/cubocore/coreapps/coretime.git
-        tag: v4.4.0
+        tag: v4.5.0
 
