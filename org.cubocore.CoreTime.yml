@@ -10,8 +10,7 @@ finish-args:
   - --socket=wayland
   - --socket=pulseaudio # Required for ringing alarm
   - --device=dri
-  - --filesystem=home
-  - --filesystem=xdg-config:create
+  - --filesystem=home # Storing weather data
   - --talk-name=org.kde.StatusNotifierWatcher
   - --talk-name=org.freedesktop.Notifications
   - --own-name=org.kde.* # For showing in the system tray
@@ -27,9 +26,6 @@ cleanup:
 modules:
   - name: libcprime
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_INSTALL_PREFIX=/app
-      - -DCMAKE_BUILD_TYPE=Release
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
@@ -38,10 +34,6 @@ modules:
     post-install:
       - install -Dp -m 644 org.cubocore.CoreTime.appdata.xml /app/share/appdata/org.cubocore.CoreTime.appdata.xml
     buildsystem: cmake-ninja
-    config-opts:
-      - -DCMAKE_INSTALL_PREFIX=/app
-      - -DCMAKE_BUILD_TYPE=Release
-      - -DCMAKE_LIBRARY_PATH=/app/lib
     sources:
       - type: file
         path: org.cubocore.CoreTime.appdata.xml
