@@ -5,21 +5,21 @@
     <id>org.cubocore.CoreTime</id>
     <metadata_license>CC0-1.0</metadata_license>
     <project_license>GPL-3.0</project_license>
-    
+
     <project_group>CuboCore</project_group>
     <developer_name>CuboCore Group</developer_name>
-    
+
     <launchable type="desktop-id">org.cubocore.CoreTime.desktop</launchable>
-    
+
     <name>CoreTime</name>
     <summary>A time related task manager</summary>
-    
+
     <description>
         <p>
             CoreTime is a very simple Clock/Calendar application which shows a clock, supports alarms, reminders, sports a stop watch and a timer.
         </p>
     </description>
-    
+
     <keywords>
       <keyword>CoreTime</keyword>
       <keyword>Clock</keyword>
@@ -43,17 +43,13 @@
     <url type="help">https://gitlab.com/cubocore/coreapps/coretime/-/blob/master/README.md</url>
     <url type="bugtracker">https://gitlab.com/cubocore/coreapps/coretime/-/issues</url>
     <url type="contact">https://app.element.io/#/room/#cubocore:matrix.org</url>
-    
+
     <releases>
         <release version="4.5.0" date="2023-08-27"/>
         <release version="4.4.0" date="2022-08-02"/>
         <release version="4.3.0" date="2021-12-25"/>
     </releases>
-    
-    <provides>
-        <id>org.cubocore.CoreTime</id>
-    </provides>
-    
+
     <screenshots>
         <screenshot type="default">
             <caption>CoreTime</caption>
