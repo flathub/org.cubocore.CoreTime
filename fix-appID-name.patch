@@ -1,0 +1,33 @@
+--- a/cc.cubocore.CoreTime.desktop
++++ b/cc.cubocore.CoreTime.desktop
+@@ -5,4 +5,4 @@
+ Exec=coretime
+-Icon=cc.cubocore.CoreTime
++Icon=org.cubocore.CoreTime
+ Type=Application
+ Categories=Qt;Utility;X-CSuite;
+--- a/src/main.cpp
++++ b/src/main.cpp
+@@ -34,6 +34,6 @@
+ #include "coretime.h"
+ 
+-const QString appID = QStringLiteral(APP_ID);
++const QString appID = QStringLiteral("org.cubocore.CoreTime");
+ 
+ 
+ int main(int argc, char *argv[])
+--- a/cc.cubocore.CoreTime.metainfo.xml
++++ b/cc.cubocore.CoreTime.metainfo.xml
+@@ -4,4 +4,4 @@
+ <component type="desktop-application">
+-    <id>cc.cubocore.CoreTime</id>
++    <id>org.cubocore.CoreTime</id>
+ 
+     <metadata_license>CC0-1.0</metadata_license>
+@@ -11,5 +11,5 @@
+     <developer_name>CuboCore Group</developer_name>
+ 
+-    <launchable type="desktop-id">cc.cubocore.CoreTime.desktop</launchable>
++    <launchable type="desktop-id">org.cubocore.CoreTime.desktop</launchable>
+ 
+     <name>CoreTime</name>

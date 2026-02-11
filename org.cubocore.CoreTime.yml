@@ -1,8 +1,11 @@
 app-id: org.cubocore.CoreTime
 runtime: org.kde.Platform
-runtime-version: '5.15-25.08'
+runtime-version: '6.10'
 sdk: org.kde.Sdk
 command: coretime
+rename-desktop-file: cc.cubocore.CoreTime.desktop
+rename-icon: cc.cubocore.CoreTime
+rename-appdata-file: cc.cubocore.CoreTime.metainfo.xml
 finish-args:
   - --share=ipc
   - --share=network
@@ -25,19 +28,20 @@ cleanup:
 modules:
   - name: libcprime
     buildsystem: cmake-ninja
-    config-opts:
-        - "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    config-opts: [
+        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+    ]
     sources:
       - type: git
         url: https://gitlab.com/cubocore/libcprime.git
-        tag: v4.5.0
+        commit: 17d4c94f3be2c7f67dc757cf852f0144945c2c69
+        tag: v5.0.1
   - name: coretime
-    post-install:
-      - install -Dp -m 644 org.cubocore.CoreTime.appdata.xml /app/share/appdata/org.cubocore.CoreTime.appdata.xml
     buildsystem: cmake-ninja
     sources:
-      - type: file
-        path: org.cubocore.CoreTime.appdata.xml
       - type: git
         url: https://gitlab.com/cubocore/coreapps/coretime.git
-        tag: v4.5.0
+        commit: f039f0eea9bce9fe103889e478f5a68a87f9621c
+        tag: v5.0.1
+      - type: patch
+        path: fix-appID-name.patch
